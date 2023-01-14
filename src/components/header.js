@@ -1,29 +1,47 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import gatsbyPng from "../images/gatsby-icon.png"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-    }}
-  >
-    <Link
-      to="/"
+const Header = ({ siteTitle }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            siteUrl
+            description
+          }
+        }
+      }
+    `
+  )
+
+  console.log("site >>", site)
+
+  return (
+    <header
       style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
+        margin: `0 auto`,
+        padding: `var(--space-4) var(--size-gutter)`,
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: `space-between`,
       }}
     >
-      {siteTitle}
-    </Link>
-    <img src={gatsbyPng} alt={"gatsby icon"} />
-  </header>
-)
+      <Link
+        to="/"
+        style={{
+          fontSize: `var(--font-sm)`,
+          textDecoration: `none`,
+        }}
+      >
+        {siteTitle}
+      </Link>
+      <img src={gatsbyPng} alt={"gatsby icon"} />
+    </header>
+  )
+}
 
 export default Header
