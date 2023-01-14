@@ -1,8 +1,6 @@
 import * as React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import gatsbyPng from "../images/gatsby-icon.png"
-
 const Header = ({ siteTitle }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -39,7 +37,6 @@ const Header = ({ siteTitle }) => {
       >
         {siteTitle}
       </Link>
-      <img src={gatsbyPng} alt={"gatsby icon"} />
     </header>
   )
 }
