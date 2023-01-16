@@ -222,3 +222,17 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+
+.posts {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.img-post {
+  margin-bottom: 40px;
+}
