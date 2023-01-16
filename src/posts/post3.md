@@ -2,6 +2,7 @@
 title: Путешествие в Америку
 category: usa
 url: usa-trip
+image: ../images/1.jpeg
 ---
 
 # Поездка в Америку
