@@ -2,7 +2,7 @@
 title: Путешествие в Россию
 category: russia
 url: russia-trip
-image: ../images/1.jpeg
+image: ../images/russia.jpeg
 ---
 
 # Поездка в Россию

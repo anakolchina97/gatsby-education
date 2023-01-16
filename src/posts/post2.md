@@ -2,7 +2,7 @@
 title: Путешествие в Рим
 category: italy
 url: italy-trip
-image: ../images/1.jpeg
+image: ../images/roman.jpeg
 ---
 
 # Поездка в Рим
